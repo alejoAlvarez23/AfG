@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100&family=Kaushan+Script&family=Martian+Mono:wght@300;400;600;700&display=swap');
+
+
+  :root{
+    --padding-container: 30px 0;
+    --color-title: #1a1a1a;
+    background-color: #eee;
+  }
+  
+  body{
+    font-family: 'IBM Plex Serif', serif;
+    font-family: 'Martian Mono', monospace;
+
+  }
+
+  .container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+
+  }
+
+  .hero{
+    width: 100%;
+    height: 100%;
+    min-height: 550px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #e6e6e6;
+    text-shadow: 1px 1px 80px  #fff;
+
+        /*-----bckg-----*/
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: repeat;
+        background-image:  url('../imagenes/fondoprice.png');
+        /*-----bckg-----*/
+
+  }
+
+
+  .hero{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #e6e6e6;
+    text-shadow: 1px 1px 80px  #fff;
+    background-color: #00000028;
+
+  }
+
+  .hero::before{
+    position: absolute;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(180deg, #0000004d 0%, #0000003a 100%), url('../imagenes/fondzot.jpg');
+    background-size: cover;
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 50% 100%, 0% 70%, 0% 35%, 0 0);
+    z-index: -1;
+
+  }
+  
+
+
+
+  /*---NAV---*/
+  .nav{
+    --padding-container: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav_logo{
+    padding-bottom: 8px;
+    width: 60px;
+    background-color: #fff0;
+    
+  }
+
+  .nav_items{
+    list-style: none;
+    text-decoration: underline 0px #0000;
+    transition: all 1s;
+
+  }
+
+    .nav_items:hover{
+    text-decoration: underline 1.5px #af9595 ;
+    transition: all 1s ;
+  }
+
+  .nav_link{
+    margin-left: auto;
+    padding: 0;
+  }
+
+  .nav_link{
+    color: #fff;
+    text-decoration: none;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+  }
+
+  .nav_menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+  }
+  .nav_img{
+    
+  display: block;
+  width: 30px;
+
+  }
+
+.nav_close{
+ display: var(--show, none);
+}
+
+
+/*---HERO_CONTAINER---*/
+
+.hero_container{
+  max-width: 800px;
+  display: grid;
+  --padding-container:0;
+  grid-auto-rows: max-content;
+  align-items: center;
+  gap: 3rem;
+  padding-bottom: 100px;
+  padding-top: 3rem;
+  text-align: center;
+
+}
+
+
+.hero_title{
+  color: #e9e8e8;
+  letter-spacing: 2px;
+  font-size: 4rem;
+  text-shadow: 3px 0px 40px  #ffffff3a;
+  font-family: 'Kaushan Script', cursive;
+  transition: all .5s;
+}
+
+.hero_title:hover{
+  letter-spacing: 2px;
+  text-shadow: 3px 0px 75px  #ffbdbd;
+  transition: all 1s;
+}
+
+
+.cta{
+  display: inline-block;
+  background-color: #1a1a1a;
+  justify-self:center;
+  color: #e6e6e6;
+  text-decoration: none;
+  padding: 13px 20px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 6px #fff;
+  cursor: pointer;
+  font-family: 'Martian Mono', monospace;
+  transition: .5s;
+}
+
+.cta:hover{
+  box-shadow: 0px 0px 8px #fff;
+  transition: .5s;
+}
+
+/*---NOSOTROS---*/
+
+.nosotros_container{
+  
+  display: grid;
+  grid-template-columns:  1fr 300px;
+  gap: 1rem;
+  text-align: left;
+  padding: 0 0px;
+  background-color: #00000028;
+      /*-----bckg-----*/
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: repeat;
+      background-image: url('../imagenes/fondogeneral.png');
+      /*-----bckg-----*/
+}
+
+.nosotros_title{
+  padding-top: 65px;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  color: #000000;
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-decoration: underline #0000;
+  transition: all 1s;
+}
+
+.nosotros_paragraph{
+  padding: 20px;
+  letter-spacing: 1px;;
+}
+.nosotros_img{
+  grid-row: 3/-1;
+  grid-column: 2/-1;
+  max-width: 300px;
+  background-size: cover;
+}
+
+/*---MISION---*/
+
+.mision{
+  padding: 0 20px;
+  background-image: linear-gradient(180deg, #ffffff75 20px, #00000088 100%), url('../imagenes/kit1.jpg');
+  object-fit: none;
+  width: 100%;
+}
+
+.mision_container{
+  display: grid;
+  grid-template-columns: 300px 1fr ;
+  grid-template-rows: 1fr 200px ;
+  gap: 1rem;
+  text-align: left;
+  padding: 0 0px;
+  background-color: #00000028;
+}
+
+.mision_title{
+  padding-top: 65px;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  color: #000000;
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-decoration: underline #0000;
+  transition: all 1s;
+}
+
+.mision_paragraph{
+  letter-spacing: 1px;
+  color: #c9c9c9d0;
+}
+.mision_img{
+  grid-column: 1/0;
+  grid-row: 1/-1;
+  max-width: 300px;
+  background-size: cover;
+}
+
+
+/*---EQUIPO---*/
+
+.equipo{
+      /*-----bckg-----*/
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: repeat;
+      background-image: url('../imagenes/fondogeneral.png');
+      /*-----bckg-----*/
+}
+
+.equipo_container{
+  
+  display: grid;
+  grid-template-columns:  1fr 300px;
+  gap: 1rem;
+  text-align: left;
+  padding: 0 0px;
+  background-color: #00000028;
+}
+
+.equipo_title{
+  padding-top: 65px;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  color: #000000;
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-decoration: underline #0000;
+  transition: all 1s;
+}
+
+.equipo_paragraph{
+  padding: 20px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+.equipo_img{
+  grid-row: 3/-1;
+  grid-column: 2/-1;
+  max-width: 300px;
+  background-size: cover;
+}
+
+
+
+/*---HISTORIA---*/
+.historia{
+  padding: 0 20px;
+  background-image: linear-gradient(180deg, #ffffff75 20px, #00000088 100%), url('../imagenes/fondot21.jpg');
+  object-fit: none;
+  width: 100%;
+}
+
+.historia_container{
+  display: grid;
+  grid-template-columns: 300px 1fr ;
+  grid-template-rows: 200px 200px ;
+  gap: 1rem;
+  text-align: left;
+  padding: 0 0px;
+  background-color: #00000028;
+}
+
+.historia_title{
+  padding-top: 65px;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  color: #000000;
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-decoration: underline #0000;
+  transition: all 1s;
+}
+
+.historia_paragraph{
+  padding: 20px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.historia_img{
+  border-radius: 15%;
+  grid-column: 1/0;
+  grid-row: 1/-1;
+  max-width: 300px;
+  background-size: cover;
+}
+
+
+/*---VISION---*/
+.vision{
+      /*-----bckg-----*/
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: repeat;
+      background-image: url('../imagenes/fondogeneral.png');
+      /*-----bckg-----*/
+}
+
+.vision_container{
+  
+  display: grid;
+  grid-template-columns:  1fr 300px;
+  gap: 1rem;
+  text-align: left;
+  padding: 0 0px;
+  background-color: #00000028;
+}
+
+.vision_title{
+  padding-top: 65px;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  color: #000000;
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-decoration: underline #0000;
+  transition: all 1s;
+}
+
+.vision_paragraph{
+  padding: 20px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+.vision_img{
+  grid-row: 3/-1;
+  grid-column: 2/-1;
+  max-width: 300px;
+  background-size: cover;
+}
+
+
+
+
+
+/*---FOOTER---*/
+
+.footer{
+    background-color: #0000006c;
+        /*-----bckg-----*/
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: repeat;
+        background-image: url('../imagenes/fondoprice.png');
+        /*-----bckg-----*/
+  }
+  
+  .footer_title{
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .footer_title, .footer_newsletter{
+    color: #ffffff;
+    font-weight: 300;
+  }
+  
+  .footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 60px;
+  }
+  
+  .nav--footer{
+    padding-bottom: 20px;
+    display: grid;
+    gap: 1em;
+    grid-auto-flow: row;
+    height: 100%;
+  }
+  
+  .nav_link--footer{
+    display: flex;
+    margin: 0;
+    margin-right: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .nav_link_footer{
+    color: #aaaaaa;
+    text-decoration: none;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+  }
+  
+  .footer_inputs{
+    margin-top: 10px;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .footer_input{
+    background-color: #fff;
+    width: 80%;
+    height: 30px;
+    display: block;
+    padding-left: 10px;
+    border-radius: 6px;
+    font-size: 1vmax;
+    outline: none;
+    border: none;
+    margin-right: 16px;
+  
+  }
+  
+  .footer_submit{
+    margin-left: auto;
+    display: inline-block;
+    height: 30px;
+    padding: 0 20x;
+    width: 30%;
+    background-color: #2090f977;
+    border: none;
+    font-size: 1vmax;
+    color: #000000;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .4s;
+  }
+  
+  .footer_submit:hover{
+    background-color: #2090f9a4;
+    color: #ffffff;
+    transition: all .6s;
+  }
+  
+  .footer_copy{
+    --pading-container:30px 0;
+    text-align: center;
+    color: #ececec;
+  }
+  
+  .footer_copyright{
+    font-weight: 300;
+  }
+  
+  .footer_icons{
+    display: inline-flex;
+    margin-bottom: 10px;
+  }
+  
+  .footer_img{
+    width: 30px;
+  }
